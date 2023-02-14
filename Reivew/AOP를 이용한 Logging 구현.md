@@ -199,7 +199,7 @@ Pointcut을 적용하도록 설정합니다.
 
 **Logging 결과물**
 
-![image-20230215033956316](C:\Users\tlska\Desktop\github\Project_Review\Reivew\image-20230215033956316.png)
+![img.png](img.png)
 
 Logging 기능을 적용하고 요청을 보냈을 때 API 요청이 어떠한 방식으로 전달되며,
 
