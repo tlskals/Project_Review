@@ -62,7 +62,7 @@ public class Place extends BaseTime implements Serializable {
 
 
 
-먼저 Raw Query로 검색 기능을 구현하기 위하여 @Query 애너테이션을 사용하셨습니다.
+먼저 Raw Query로 검색 기능을 구현하기 위하여 @Query 애너테이션을 사용하였습니다.
 
 ```java
 @Query("select p from Place p where p.name like %:keyword%")
