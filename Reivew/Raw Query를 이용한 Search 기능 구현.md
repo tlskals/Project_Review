@@ -24,7 +24,7 @@ Page<Place> findByNameIsLike (Pageable pageable, @Param("keyword") String keywor
 
 단순 OrderBy를 붙이기엔 Entity 연관 관계에 문제가 있었습니다.
 
-<Place Entity>
+**Place Entity**
 
 ```java
 @Data
