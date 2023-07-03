@@ -1,4 +1,4 @@
-# *Raw Query를 이용한 Search 기능 구현*
+# *JPQL을 이용한 Search 기능 구현*
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-## 왜 JPA Repository가 아닌 Raw Query를 사용했는가?
+## 왜 JPQL을 사용했는가?
 
 
 
@@ -50,7 +50,7 @@ public class Place extends BaseTime implements Serializable {
 
 이러한 기능을 위해서 Place Entity와 PlaceLikeUser Entity를 분리하였고, 일대다 연관 관계로 매핑하였습니다.
 
-이러한 코드 구조로 인하여 전반적인 코드 수정을 하지 않으면 JPA Repository로 검색 기능을 구현하기 어려웠습니다.
+이러한 코드 구조로 인하여 전반적인 코드 수정을 하지 않으면 JPA Repository 만으로는 검색 기능을 구현하기 어려웠습니다.
 
 
 
@@ -58,11 +58,11 @@ public class Place extends BaseTime implements Serializable {
 
 
 
-## Raw Query 작성
+## JPQL 작성
 
 
 
-먼저 Raw Query로 검색 기능을 구현하기 위하여 @Query 애너테이션을 사용하였습니다.
+먼저 JPQL로 검색 기능을 구현하기 위하여 @Query 애너테이션을 사용하였습니다.
 
 ```java
 @Query("select p from Place p where p.name like %:keyword%")
@@ -88,7 +88,7 @@ Place는 PlaceLikeUser를 HashSet으로 받아오고 있었고, 추천 개수를
 
 
 
-## Raw Query 작성을 통해 느낀 점
+## JPQL 작성을 통해 느낀 점
 
 
 
